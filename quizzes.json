@@ -1,0 +1,479 @@
+[
+    {
+        "title": "Science Quiz",
+        "questions": [
+            {
+                "content": "What is the chemical formula for water?",
+                "options": [
+                    {"content": "H2O2", "is_correct": false},
+                    {"content": "CO2", "is_correct": false},
+                    {"content": "H2O", "is_correct": true},
+                    {"content": "O2", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which planet is known as the Red Planet?",
+                "options": [
+                    {"content": "Venus", "is_correct": false},
+                    {"content": "Mars", "is_correct": true},
+                    {"content": "Jupiter", "is_correct": false},
+                    {"content": "Mercury", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What gas do plants primarily absorb for photosynthesis?",
+                "options": [
+                    {"content": "Oxygen", "is_correct": false},
+                    {"content": "Nitrogen", "is_correct": false},
+                    {"content": "Carbon Dioxide", "is_correct": true},
+                    {"content": "Hydrogen", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What is the powerhouse of the cell?",
+                "options": [
+                    {"content": "Nucleus", "is_correct": false},
+                    {"content": "Ribosome", "is_correct": false},
+                    {"content": "Mitochondria", "is_correct": true},
+                    {"content": "Endoplasmic Reticulum", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which of the following is NOT a state of matter?",
+                "options": [
+                    {"content": "Solid", "is_correct": false},
+                    {"content": "Liquid", "is_correct": false},
+                    {"content": "Gas", "is_correct": false},
+                    {"content": "Plasma", "is_correct": true}
+                ]
+            },
+            {
+                "content": "What is the atomic number of carbon?",
+                "options": [
+                    {"content": "6", "is_correct": true},
+                    {"content": "12", "is_correct": false},
+                    {"content": "14", "is_correct": false},
+                    {"content": "8", "is_correct": false}
+                ] 
+            },
+            {
+                "content": "What force keeps objects bound to Earth?",
+                "options": [
+                    {"content": "Magnetism", "is_correct": false},
+                    {"content": "Friction", "is_correct": false},
+                    {"content": "Gravity", "is_correct": true},
+                    {"content": "Tension", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which vitamin is mainly produced when human skin is exposed to sunlight?",
+                "options": [
+                    {"content": "Vitamin C", "is_correct": false},
+                    {"content": "Vitamin A", "is_correct": false},
+                    {"content": "Vitamin D", "is_correct": true},
+                    {"content": "Vitamin B", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What is the most abundant gas in Earth's atmosphere?",
+                "options": [
+                    {"content": "Oxygen", "is_correct": false},
+                    {"content": "Nitrogen", "is_correct": true},
+                    {"content": "Carbon Dioxide", "is_correct": false},
+                    {"content": "Argon", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What is the boiling point of water at sea level?",
+                "options": [
+                    {"content": "50C", "is_correct": false},
+                    {"content": "100C", "is_correct": true},
+                    {"content": "150C", "is_correct": false},
+                    {"content": "200C", "is_correct": false}
+                ] 
+            }
+        ]
+    },
+    {
+        "title": "History Quiz",
+        "questions": [
+            {
+                "content": "Who was the first President of the United States?",
+                "options": [
+                    {"content": "George Washington", "is_correct": true},
+                    {"content": "Abraham Lincoln", "is_correct": false},
+                    {"content": "Thomas Jefferson", "is_correct": false},
+                    {"content": "John Adams", "is_correct": false}
+                ]
+            },
+            {
+                "content": "In which year did World War II end?",
+                "options": [
+                    {"content": "1942", "is_correct": false},
+                    {"content": "1945", "is_correct": true},
+                    {"content": "1948", "is_correct": false},
+                    {"content": "1950", "is_correct": false}
+                ]
+            },
+            {
+                "content": "The Great Wall of China was primarily built to protect against invasions from which group?",
+                "options": [
+                    {"content": "Mongols", "is_correct": true},
+                    {"content": "Huns", "is_correct": false},
+                    {"content": "Romans", "is_correct": false},
+                    {"content": "Vikings", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Who was the Egyptian queen who had a famous relationship with Julius Caesar and Mark Antony?",
+                "options": [
+                    {"content": "Nefertiti", "is_correct": false},
+                    {"content": "Cleopatra", "is_correct": true},
+                    {"content": "Hatshepsut", "is_correct": false},
+                    {"content": "Isis", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What was the primary cause of the U.S. Civil War?",
+                "options": [
+                    {"content": "Taxation", "is_correct": false},
+                    {"content": "Slavery", "is_correct": true},
+                    {"content": "Immigration", "is_correct": false},
+                    {"content": "Religious Differences", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which empire was ruled by Charlemagne?",
+                "options": [
+                    {"content": "Byzantine Empire", "is_correct": false},
+                    {"content": "Ottoman Empire", "is_correct": false},
+                    {"content": "Holy Roman Empire", "is_correct": true},
+                    {"content": "British Empire", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which country was the first to land a man on the moon?",
+                "options": [
+                    {"content": "Soviet Union", "is_correct": false},
+                    {"content": "United States", "is_correct": true},
+                    {"content": "China", "is_correct": false},
+                    {"content": "Germany", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Who wrote the Declaration of Independence?",
+                "options": [
+                    {"content": "John Hancock", "is_correct": false},
+                    {"content": "Alexander Hamilton", "is_correct": false},
+                    {"content": "Thomas Jefferson", "is_correct": true},
+                    {"content": "Benjamin Franklin", "is_correct": false}
+                ]
+            },
+            {
+                "content": "The Roman Empire fell in which year?",
+                "options": [
+                    {"content": "476 AD", "is_correct": true},
+                    {"content": "1215 AD", "is_correct": false},
+                    {"content": "1453 AD", "is_correct": false},
+                    {"content": "800 AD", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which city was divided by a wall from 1961 to 1989?",
+                "options": [
+                    {"content": "Berlin", "is_correct": true},
+                    {"content": "Warsaw", "is_correct": false},
+                    {"content": "Prague", "is_correct": false},
+                    {"content": "Vienna", "is_correct": false}
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Sports Quiz",
+        "questions": [
+            {
+                "content": "In which sport is the term 'love' used for a score of zero?",
+                "options": [
+                    {"content": "Tennis", "is_correct": true},
+                    {"content": "Badminton", "is_correct": false},
+                    {"content": "Soccer", "is_correct": false},
+                    {"content": "Basketball", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which country has won the most FIFA World Cup titles?",
+                "options": [
+                    {"content": "Germany", "is_correct": false},
+                    {"content": "Brazil", "is_correct": true},
+                    {"content": "Argentina", "is_correct": false},
+                    {"content": "Italy", "is_correct": false}
+                ]
+            },
+            {
+                "content": "How many players are on a baseball team on the field during a game?",
+                "options": [
+                    {"content": "9", "is_correct": true},
+                    {"content": "11", "is_correct": false},
+                    {"content": "7", "is_correct": false},
+                    {"content": "10", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which athlete has won the most Olympic gold medals?",
+                "options": [
+                    {"content": "Usain Bolt", "is_correct": false},
+                    {"content": "Michael Phelps", "is_correct": true},
+                    {"content": "Carl Lewis", "is_correct": false},
+                    {"content": "Mark Spitz", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which country hosts the Wimbledon tennis tournament?",
+                "options": [
+                    {"content": "United States", "is_correct": false},
+                    {"content": "France", "is_correct": false},
+                    {"content": "United Kingdom", "is_correct": true},
+                    {"content": "Australia", "is_correct": false}
+                ]
+            },
+            {
+                "content": "In which sport would you perform a 'slam dunk'?",
+                "options": [
+                    {"content": "Soccer", "is_correct": false},
+                    {"content": "Basketball", "is_correct": true},
+                    {"content": "Volleyball", "is_correct": false},
+                    {"content": "Rugby", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which sport is known as 'The Beautiful Game'?",
+                "options": [
+                    {"content": "Baseball", "is_correct": false},
+                    {"content": "Basketball", "is_correct": false},
+                    {"content": "Soccer", "is_correct": true},
+                    {"content": "Tennis", "is_correct": false}
+                ]
+            },
+            {
+                "content": "In golf, what is a score of one stroke under par for a hole called?",
+                "options": [
+                    {"content": "Eagle", "is_correct": false},
+                    {"content": "Birdie", "is_correct": true},
+                    {"content": "Par", "is_correct": false},
+                    {"content": "Bogey", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which American football team has won the most Super Bowl championships?",
+                "options": [
+                    {"content": "Dallas Cowboys", "is_correct": false},
+                    {"content": "San Francisco 49ers", "is_correct": false},
+                    {"content": "Pittsburgh Steelers", "is_correct": false},
+                    {"content": "New England Patriots", "is_correct": true}
+                ]
+            },
+            {
+                "content": "In which country were the first modern Olympic Games held?",
+                "options": [
+                    {"content": "France", "is_correct": false},
+                    {"content": "Greece", "is_correct": true},
+                    {"content": "Italy", "is_correct": false},
+                    {"content": "United States", "is_correct": false}
+                ]
+            }
+        ]
+    }
+    ,
+    {
+        "title": "Music Quiz",
+        "questions": [
+            {
+                "content": "Who is known as the 'King of Pop'?",
+                "options": [
+                    {"content": "Elvis Presley", "is_correct": false},
+                    {"content": "Michael Jackson", "is_correct": true},
+                    {"content": "Prince", "is_correct": false},
+                    {"content": "Freddie Mercury", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which classical composer wrote 'Fur Elise'?",
+                "options": [
+                    {"content": "Beethoven", "is_correct": true},
+                    {"content": "Mozart", "is_correct": false},
+                    {"content": "Bach", "is_correct": false},
+                    {"content": "Chopin", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which band was John Lennon a member of?",
+                "options": [
+                    {"content": "The Rolling Stones", "is_correct": false},
+                    {"content": "Led Zeppelin", "is_correct": false},
+                    {"content": "The Beatles", "is_correct": true},
+                    {"content": "Pink Floyd", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Who is the lead vocalist of the band Queen?",
+                "options": [
+                    {"content": "Mick Jagger", "is_correct": false},
+                    {"content": "David Bowie", "is_correct": false},
+                    {"content": "Freddie Mercury", "is_correct": true},
+                    {"content": "Steven Tyler", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which singer is known for the hit 'Like a Prayer'?",
+                "options": [
+                    {"content": "Madonna", "is_correct": true},
+                    {"content": "Whitney Houston", "is_correct": false},
+                    {"content": "Celine Dion", "is_correct": false},
+                    {"content": "Mariah Carey", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which instrument has 88 keys?",
+                "options": [
+                    {"content": "Violin", "is_correct": false},
+                    {"content": "Guitar", "is_correct": false},
+                    {"content": "Piano", "is_correct": true},
+                    {"content": "Trumpet", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What genre of music is associated with Bob Marley?",
+                "options": [
+                    {"content": "Blues", "is_correct": false},
+                    {"content": "Jazz", "is_correct": false},
+                    {"content": "Rock", "is_correct": false},
+                    {"content": "Reggae", "is_correct": true}
+                ]
+            },
+            {
+                "content": "What is the name of the music festival held in the California desert?",
+                "options": [
+                    {"content": "Coachella", "is_correct": true},
+                    {"content": "Glastonbury", "is_correct": false},
+                    {"content": "Lollapalooza", "is_correct": false},
+                    {"content": "Tomorrowland", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which artist released the album 'Thriller'?",
+                "options": [
+                    {"content": "Prince", "is_correct": false},
+                    {"content": "Michael Jackson", "is_correct": true},
+                    {"content": "Whitney Houston", "is_correct": false},
+                    {"content": "David Bowie", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which group had a hit with the song 'Bohemian Rhapsody'?",
+                "options": [
+                    {"content": "ABBA", "is_correct": false},
+                    {"content": "Queen", "is_correct": true},
+                    {"content": "The Rolling Stones", "is_correct": false},
+                    {"content": "U2", "is_correct": false}
+            ]
+          }
+        ]
+      }
+    ,
+    {
+        "title": "General Knowledge Quiz",
+        "questions": [
+            {
+                "content": "What is the capital city of France?",
+                "options": [
+                    {"content": "Rome", "is_correct": false},
+                    {"content": "Madrid", "is_correct": false},
+                    {"content": "Paris", "is_correct": true},
+                    {"content": "Berlin", "is_correct": false}
+                ]
+            },
+            {
+                "content": "How many continents are there on Earth?",
+                "options": [
+                    {"content": "5", "is_correct": false},
+                    {"content": "6", "is_correct": false},
+                    {"content": "7", "is_correct": true},
+                    {"content": "8", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which is the largest ocean on Earth?",
+                "options": [
+                    {"content": "Atlantic", "is_correct": false},
+                    {"content": "Indian", "is_correct": false},
+                    {"content": "Arctic", "is_correct": false},
+                    {"content": "Pacific", "is_correct": true}
+                ]
+            },
+            {
+                "content": "What is the smallest planet in our solar system?",
+                "options": [
+                    {"content": "Mars", "is_correct": false},
+                    {"content": "Mercury", "is_correct": true},
+                    {"content": "Venus", "is_correct": false},
+                    {"content": "Neptune", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which country is home to the kangaroo?",
+                "options": [
+                    {"content": "South Africa", "is_correct": false},
+                    {"content": "Brazil", "is_correct": false},
+                    {"content": "Australia", "is_correct": true},
+                    {"content": "India", "is_correct": false}
+                ]
+            },
+            {
+                "content": "How many colors are in a rainbow?",
+                "options": [
+                    {"content": "5", "is_correct": false},
+                    {"content": "6", "is_correct": false},
+                    {"content": "7", "is_correct": true},
+                    {"content": "8", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What is the hardest natural substance on Earth?",
+                "options": [
+                    {"content": "Gold", "is_correct": false},
+                    {"content": "Iron", "is_correct": false},
+                    {"content": "Diamond", "is_correct": true},
+                    {"content": "Platinum", "is_correct": false}
+                ]
+            },
+            {
+                "content": "Which is the longest river in the world?",
+                "options": [
+                    {"content": "Amazon", "is_correct": false},
+                    {"content": "Nile", "is_correct": true},
+                    {"content": "Yangtze", "is_correct": false},
+                    {"content": "Mississippi", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What is the name of the longest bone in the human body?",
+                "options": [
+                    {"content": "Tibia", "is_correct": false},
+                    {"content": "Femur", "is_correct": true},
+                    {"content": "Humerus", "is_correct": false},
+                    {"content": "Radius", "is_correct": false}
+                ]
+            },
+            {
+                "content": "What currency is used in Japan?",
+                "options": [
+                    {"content": "Yuan", "is_correct": false},
+                    {"content": "Dollar", "is_correct": false},
+                    {"content": "Yen", "is_correct": true},
+                    {"content": "Won", "is_correct": false}
+                ]
+            }
+        ]
+    }
+]
