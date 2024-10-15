@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card shadow-lg rounded animated-card" style="margin-top: 80px;">
+                <div class="card-body">
+                    <form id="loginForm" method="POST" action="/login">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <div class="alert alert-danger fade show d-none mt-4" id="login-error">
+                            Invalid username or password. Please try again.
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" id="username" name="username" class="form-control form-control-sm" placeholder="Enter your username" required>
+                            <div class="invalid-feedback" id="username-error"></div>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-control form-control-sm" placeholder="Enter your password" required>
+                            <div class="invalid-feedback" id="password-error"></div>
+                            <small class="form-text text-muted">Forgot your password? <a href="/forgot-password">Click here</a></small>
+                        </div>
+
+                        <div class="form-check mb-1">
+                            <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                            <label class="form-check-label small mb-0 ms-2" for="rememberMe">Remember Me</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark btn-sm btn-block" id="submitButton">Login</button>
+
+                        <div class="text-center mt-2">
+                            <p class="mb-0 small">New to Quizify? <a href="/register">Register Now</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: url("{{ url_for('static', filename='image/background.jpeg') }}") no-repeat center center fixed; 
+        background-size: cover;
+    }
+
+    .animated-card {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInUp 0.5s forwards;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .btn-dark {
+        background-color: #001742;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-dark:hover {
+        background-color: #002f80;
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            margin: 0 15px;
+        }
+    }
+</style>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const usernameError = document.getElementById("username-error");
+        const passwordError = document.getElementById("password-error");
+        const loginError = document.getElementById("login-error");
+
+        // Clear previous errors
+        usernameError.textContent = "";
+        passwordError.textContent = "";
+        loginError.classList.add("d-none");
+
+        fetch("/login", {
+            method: "POST",
+            body: new FormData(this)
+        })
+        .then(response => {
+            if (response.ok) {
+                window.location.href = "/";
+            } else {
+                response.text().then(text => {
+                    if (text.includes("invalid username")) {
+                        usernameError.textContent = "Invalid username.";
+                    } else if (text.includes("invalid password")) {
+                        passwordError.textContent = "Invalid password.";
+                    } else {
+                        loginError.textContent = "Invalid username or password.";
+                        loginError.classList.remove("d-none");
+                    }
+                });
+            }
+        })
+        .catch(error => {
+            console.error("Login failed:", error);
+            loginError.textContent = "An error occurred. Please try again later.";
+            loginError.classList.remove("d-none");
+        });
+    });
+</script>
+{% endblock %}
