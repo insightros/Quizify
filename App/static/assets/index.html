@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-5 text-center animate-container" style="background-color: transparent;">
+    <h1 class="display-4 fw-bold mb-4 text-light" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">Welcome Back, {{current_user.username}}!</h1>
+    <p class="lead mb-4 text-light">Welcome to Quizify, your ultimate destination for interactive quizzes! Dive into a world of engaging quizzes that not only entertain but also challenge your knowledge.</p>
+    <a href="/quiz" class="btn btn-primary btn-lg mb-5">Discover Quizify's Quizzes</a>
+
+    <!-- Quiz Categories Card -->
+    <div class="row g-4 mb-5 justify-content-center">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-lg rounded-3" style="background-color: rgba(255, 255, 255, 0.6);">
+                <div class="card-body">
+                    <h2 class="h5 text-dark">Quiz Categories</h2>
+                    <ul class="list-unstyled">
+                        <li class="py-2"><strong>🧪 Science:</strong> Test your science knowledge.</li>
+                        <li class="py-2"><strong>📜 History:</strong> Challenge yourself with history facts.</li>
+                        <li class="py-2"><strong>⚽ Sports:</strong> How much do you know about sports?</li>
+                        <li class="py-2"><strong>🎵 Music:</strong> Show off your musical knowledge.</li>
+                        <li class="py-2"><strong>🌍 General Knowledge:</strong> Test your general knowledge skills.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Cards Section -->
+    <div class="mb-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm rounded-3 mb-3" style="background-color: rgba(255, 255, 255, 0.6);">
+                    <div class="card-body">
+                        <h5>Test Your Science Knowledge!</h5>
+                        <p>Are you up for a challenge? Test your science skills!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm rounded-3 mb-3" style="background-color: rgba(255, 255, 255, 0.6);">
+                    <div class="card-body">
+                        <h5>How Well Do You Know History?</h5>
+                        <p>Put your historical knowledge to the test!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm rounded-3 mb-3" style="background-color: rgba(255, 255, 255, 0.6);">
+                    <div class="card-body">
+                        <h5>Challenge Your Sports Knowledge!</h5>
+                        <p>Are you a sports fanatic? Prove it!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn-primary {
+        background-color: #003088;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0043b6;
+        transform: scale(1.05);
+    }
+
+    .container-fluid {
+        padding: 40px;
+        background-color: rgba(0, 7, 46, 0.2);
+    }
+
+    .card {
+        transition: transform 0.2s;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    h1, h2, h5 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .text-light {
+        color: #ffffff;
+    }
+
+    /* Animation for loading */
+    .animate-container {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .animate-container.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const container = document.querySelector('.animate-container');
+        setTimeout(() => {
+            container.classList.add('visible');
+        }, 100);
+    });
+</script>
+
+{% endblock %}
