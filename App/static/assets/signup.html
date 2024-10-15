@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card shadow-lg rounded animated-card" style="margin-top: 80px;">
+                <div class="card-body">
+                    <form method="POST" action="/register">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+                        <div class="form-group mb-2">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" id="username" name="username" class="form-control form-control-sm" placeholder="Choose a username" required>
+                            {% if form.username.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.username.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control form-control-sm" placeholder="Provide your email" required>
+                            {% if form.email.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.email.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-control form-control-sm" placeholder="Minimum 8 characters" required>
+                            {% if form.password.errors %}
+                                <div class="invalid-feedback">
+                                    {% for error in form.password.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="confirm_password" class="form-label">Confirm Password</label>
+                            <input type="password" id="confirm_password" name="confirm_password" class="form-control form-control-sm" placeholder="Confirm your password" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark btn-sm btn-block">Register</button>
+
+                        <div class="text-center mt-2">
+                            <p class="mb-0 small">Already have an account? <a href="/login">Login here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: url("{{ url_for('static', filename='image/background.jpeg') }}") no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .animated-card {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInUp 0.5s forwards;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .btn-dark {
+        background-color: #001742;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-dark:hover {
+        background-color: #002f80;
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            margin: 0 15px;
+        }
+    }
+</style>
+{% endblock %}
