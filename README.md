@@ -18,11 +18,6 @@ The project is structured in a way that makes development and navigation easy:
 - **`quiz_data_loader.py`**: A script for loading quiz data into the app.
 - **`run.py`**: The entry point for running the application.
 
-### Template Files
-
-- **`templates/`**
-  - **Jinja2 templates**: Used to render HTML for various pages.
-
 ### Static Files
 
 - **`assets/`**
@@ -34,16 +29,12 @@ The project is structured in a way that makes development and navigation easy:
     - `signin.html`
     - `signup.html`
     - `start_quiz.html`
-  - **Images**: Contains background images used in the HTML files.
+  - **Images**: Contains background image used in the HTML files.
 
 ### Configuration Files
 
 - **`requirements.txt`**: Lists all the required dependencies for the project.
 - **`quizzes.json`**: Contains the quiz data in JSON format.
-
-### Virtual Environment
-
-- **`myenv/`**: The Python virtual environment for the project.
 
 ## 🚀 Getting Started
 
@@ -82,14 +73,6 @@ Once the app is running, follow these steps to start using Quizify:
 2. **Log in** to access your personalized dashboard.
 3. **Take quizzes** on various topics and challenge your knowledge.
 4. **Review your answers** to learn and improve.
-
-## 🤝 Contributions
-
-Contributions are welcome! If you would like to contribute, feel free to submit a pull request or open an issue. Let's work together to make Quizify better for everyone!
-
-## 📄 License
-
-This project is licensed under the MIT License. You are free to use, modify, and distribute the project as you see fit.
 
 ---
 
