@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Quizify{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Background image with blur effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("{{ url_for('static', filename='image/background.jpeg') }}") no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        body {
+            background-color: #003061;
+            min-height: 100vh;
+        }
+
+        /* Center the "Quiz web app" title */
+        .navbar-brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Stylish navbar */
+        .navbar {
+            background: linear-gradient(to right, rgba(0, 23, 66, 0.8), rgba(0, 47, 128, 0.8));
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 1rem 2rem;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Main content container */
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navbar link hover effect */
+        .nav-link {
+            color: #f0f0f0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.75rem 1rem;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s ease;
+        }
+
+        /* Initially hide text */
+        .nav-link .nav-text {
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateX(10px);
+        }
+
+        .nav-link:hover {
+            color: #f0f8ff;
+        }
+
+        /* Show text on hover */
+        .nav-link:hover .nav-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Navbar toggler for small screens */
+        .navbar-toggler {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(200%);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/">Quizify</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto pr-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-text"> Home</span>
+                    </a>
+                </li>
+                {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/quiz">
+                            <i class="fas fa-clipboard"></i>
+                            <span class="nav-text"> Take A Quiz</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="nav-text"> Logout</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span class="nav-text"> Sign In</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">
+                            <i class="fas fa-user-plus"></i>
+                            <span class="nav-text"> Sign Up</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Trigger the fade-in effect for the body and navbar
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = 1;
+            const navbar = document.querySelector('.navbar');
+            navbar.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
